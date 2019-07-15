@@ -20,8 +20,8 @@ class RaindropConverter {
     		.stream()
     		.sorted()
     		.filter(key -> number % key == 0)
-    		.map(key -> FACTORS.get(key))
-    		.reduce((string1, string2) -> string1.concat(string2))
+    		.map(FACTORS::get)
+    		.reduce(String::concat)
     		.orElse(Integer.toString(number));
     }
 
