@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 class ResistorColor {
 
 	private static final String[] COLORS = {
@@ -14,13 +16,7 @@ class ResistorColor {
 	};
 
     int colorCode(String color) {
-        for (int i = 0; i < COLORS.length; i++) {
-        	if (COLORS[i] == color) {
-        		return i;
-        	}
-        }
-
-        return -1;
+    	return Arrays.asList(COLORS).indexOf(color);
     }
 
     String[] colors() {
